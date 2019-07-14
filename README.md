@@ -24,7 +24,8 @@ cocos creator official sample rebuild version
 解决方法: 
 
 `git rm --cache -r filename`
-`git add`
+
+`git add .`
 
 然后提交推送至远程仓库即可。
 
