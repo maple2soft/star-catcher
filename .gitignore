@@ -1,0 +1,9 @@
+# ignore these dir
+
+libary/
+local/
+temp/
+build/
+
+# ignore these files
+*.meta
