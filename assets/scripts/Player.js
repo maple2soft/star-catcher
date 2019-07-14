@@ -63,18 +63,31 @@ cc.Class({
             case cc.macro.KEY.d:
                 this.accRight = true;
                 break;
+
+            // 按下<-键，向左加速
+            case cc.macro.KEY.left:
+                this.accLeft = true;
+                break;
+            // 按下->键，向右加速
+            case cc.macro.KEY.right:
+                this.accRight = true;
+                break;
         }
     },
 
     onKeyUp(event) {
         // 当键盘抬起时，设置标志flag为false
         switch (event.keyCode) {
-            // 按下a键，向左加速
             case cc.macro.KEY.a:
                 this.accLeft = false;
                 break;
-            // 按下d键，向右加速
             case cc.macro.KEY.d:
+                this.accRight = false;
+                break;
+            case cc.macro.KEY.left:
+                this.accLeft = false;
+                break;
+            case cc.macro.KEY.right:
                 this.accRight = false;
                 break;
         }
@@ -124,6 +137,6 @@ cc.Class({
         }
 
         // 根据当前速度更新主角的位置
-        this.node.x += this.xSpeed * dt;        
+        this.node.x += this.xSpeed * dt;
     },
 });
