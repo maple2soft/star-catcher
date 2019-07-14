@@ -1,6 +1,6 @@
 # ignore these dir
 
-libary/
+library/
 local/
 temp/
 build/
